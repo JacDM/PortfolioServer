@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const port = process.env.PORT || "4000";
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -21,5 +22,5 @@ app.get('/close', function(req,res){
   console.log('Server is Exiting');
 });
 
-app.listen(80);
-console.log('Server is listening on port  http://localhost:80');
+app.listen(port);
+console.log(`Listening to requests on http://localhost:${port}`);
